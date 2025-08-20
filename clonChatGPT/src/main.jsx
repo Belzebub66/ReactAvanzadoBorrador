@@ -9,6 +9,7 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <div className="grid grid-cols-[auto_1fr] h-screen">
       <GlobalProvider>
+        {/* provider */}
         <History />
         <App />
       </GlobalProvider>
