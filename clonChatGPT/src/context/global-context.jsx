@@ -32,17 +32,17 @@ function globalReducer(state, action) {
       return state;
     }
     case "@load_messages": {
-      // lee todos los mensajes guardados
+
       const history = localStorage.getItem("history");
       if (!history) {
         return { messages: [], ...state };
       }
-      // evitar que el state se sobreescriba
+
       state.messages = JSON.parse(history);
       return { ...state };
     }
     case "@current_chat": {      
-      // actulizamos el chat actual
+
       state.currentChat = action.payload;
       return { ...state };
     }
